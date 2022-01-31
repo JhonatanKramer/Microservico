@@ -3,44 +3,47 @@ package com.devsuperior.hrpayroll.entities;
 import java.io.Serializable;
 
 public class Payment implements Serializable {
-    private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = 1L;
 
-    private String nome;
-    private Double dailyIncome;
-    private Integer days;
+	private String name;
+	private Double dailyIncome;
+	private Integer days;
+	
+	public Payment() {
+	}
 
-    public Payment(String nome, Double dailyIncome, Integer days) {
-        this.nome = nome;
-        this.dailyIncome = dailyIncome;
-        this.days = days;
-    }
-    public Payment() {
-    }
+	public Payment(String name, Double dailyIncome, Integer days) {
+		super();
+		this.name = name;
+		this.dailyIncome = dailyIncome;
+		this.days = days;
+	}
 
-    public String getNome() {
-        return nome;
-    }
+	public String getName() {
+		return name;
+	}
 
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
+	public void setName(String name) {
+		this.name = name;
+	}
 
-    public Double getDailyIncome() {
-        return dailyIncome;
-    }
+	public Double getDailyIncome() {
+		return dailyIncome;
+	}
 
-    public void setDailyIncome(Double dailyIncome) {
-        this.dailyIncome = dailyIncome;
-    }
+	public void setDailyIncome(Double dailyIncome) {
+		this.dailyIncome = dailyIncome;
+	}
 
-    public Integer getDays() {
-        return days;
-    }
+	public Integer getDays() {
+		return days;
+	}
 
-    public void setDay(Integer days) {
-        this.days = days;
-    }
-    public double getTotal(){
-        return days * dailyIncome;
-    }
+	public void setDays(Integer days) {
+		this.days = days;
+	}
+	
+	public double getTotal() {
+		return days * dailyIncome;
+	}
 }
